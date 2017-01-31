@@ -1,5 +1,13 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.3.1
+- 2.3.1
 before_install: gem install bundler -v 1.12.5
+deploy:
+  provider: rubygems
+  api_key:
+    secure: x4IgOV/KRIBw81WMpPvo4Ss8qPvhTGjBRKQRZ6BgJWUWiWqZhFzHOM+PJfa0ZqZJAkSlqtRVNSIbxfXXpTjbVYnMUEZYQ76vovQpda7eeVoQ+yywEXGmBOilTz8v7rmMijmlywMFipjisydTNsJLjL5oZCN+4ZvFToJPo5FqVK3dWtIE6oeWZ8gI7o2I8i5xbCSVpnigA1AuOxzQhpUT4kaq87+XkhXYjHg5mtIK6D2RCEMgr2QwKC/8U0jjEUB7+gymIWoC1Tnj0NyDWoh/YqcJ5LaL2iJYV9CEEpaJLiXjifWG1fklHgEqFFrT08kY5/WK62gEn0It5FVcW51ahNra8FNd/8VBi3PqXpBmsD/bC7BvJRIRV2PjoC6iE27KA8IrWhY7HwoHoOaGlk8Fa0dS27unyRdUbaiFPM1L6eRquC1T8nMH2VpvCTqa3+NvRuWMQoIiRU2JZfBpS2Kf7sk2F9FggCeEfDcEcF+e8x2cWNzTLlA7IHKIf1lfC7vX8ViWirDrahkNhHgsw0dC2HyJcrycwIrhqBgl2uuxPrxKpLtJPp+xdmeiftmHgr3FdPBHqxLwGBOGpZEuLpYrc9vI+O00PFz9p1hxpSbXEj6CLfj1LnVDPeGZjWMneKF5fNd/AT0AbWxb0TX6bcXStb8krVnVB9hZeCJtTI4VQCw=
+  gem: penelope
+  on:
+    tags: true
+    repo: jgnagy/penelope
